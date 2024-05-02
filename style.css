@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Khula:wght@400;600;700&family=Public+Sans:wght@100;300;400;600&display=swap');
+
+body {
+  background-color: #d2e1f8;
+  font-family: "Public Sans", sans-serif;
+  color: #e68d08;
+  overflow: hidden;
+}
+.light{
+    transition: 1s;
+    --background : linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.6) 50%, rgba(255,255,255,.1) 100%);
+}
+.dark{
+    transition: 1s;
+    --background: #121212;
+}
+a {
+  color: #cf048c;
+}
+a:hover {
+  color: #fff;
+}
+.container {    
+  color: #cf048c;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.phone {
+  background-color: var(--background);
+  height: 740px;
+  width: 360px;
+  border-radius: 25px;
+  box-shadow: rgba(51, 5, 158, 0.1) 0px 48px 100px 0px, rgba(16, 3, 90, 0.15) 0px 30px 100px 0px;
+}
+#top-menu {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5%;
+  text-transform: uppercase;
+  font-size: .7rem;
+  letter-spacing: .1rem;
+  color: #abb3c7;
+}
+#top-menu i {
+  font-size:  1rem;
+}
+.song-thumbnail {
+  background: url('https://www.savisingingactor.com/wp-content/uploads/2014/08/musicnotes-thumb-400x400-335656.jpg');
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+.thumbnail-border {
+  height: 200px;
+  width: 200px;
+  margin: 20% auto 0 auto;
+  border-radius: 50%;
+  padding: .4rem;
+ box-shadow: inset 6px 6px 20px 0 rgba(211, 8, 92, 0.2), rgba(223, 226, 9, 0.1) 0px 4px 20px, rgba(224, 60, 189, 0.1) 0px 8px 24px, rgba(163, 230, 6, 0.4) 0px 16px 45px;
+}
+.button {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow:  inset 3px 2px 5px 0 rgba(223, 7, 115, 0.5), rgba(122, 221, 9, 0.1) 7px 3px 10px, rgba(6, 218, 59, 0.1) 7px 5px 10px
+}
+.button:hover {
+  box-shadow: inset 6px 6px 10px 0 rgba(37, 2, 236, 0.2);
+  background-color: #e4d506;
+  color: #1bf84b;
+}
+#mode{
+    background-color: var(--background);
+    border: none;
+    color: #6b728d;
+}
+#song-details {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.song-title {
+  font-size: 1.4rem;
+}
+.artist {
+  font-size: .8rem;
+  color:  #0c3cb4;
+}
+#time-slider {
+  margin: 20% 5%;
+}
+.slider-times {
+  font-size: .6rem;
+  display: flex;
+  justify-content: space-between;
+  color: #abb3c7;
+}
+input[type="range"]::-moz-range-progress {
+  background-color: #779bff; 
+}
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;  
+  background: transparent;
+  outline: none;
+  box-shadow: inset 2px 2px 2px 0 rgba(104, 139, 255, 0.2), inset 3px 3px 2px 0 rgba(50, 50, 50, 0.1), inset -45px -45px 1px 0 rgba(255, 255, 255, 0.1), inset -1px -1px 1px 0 rgba(0, 0, 0, 0.1);
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  outline: none;
+  border-radius: 50%;
+  border: none;
+  background: radial-gradient(circle at center, #779bff 0, #051a6e 20%, #d2e1f8 30%, #04ebc4 70%, #23f507 100%);
+box-shadow: inset 2px 2px 2px 0 rgba(104, 139, 255, 0.1), rgba(0, 0, 0, 0.1) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(241, 7, 7, 0.12) 0px 4px 6px, rgba(238, 4, 4, 0.1) 0px 12px 20px;
+}
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  background: radial-gradient(circle at center, #0a45e7 0, #d10a6e 20%, #7de409 30%, #e9a40e 50%, #fff 100%);
+  box-shadow: inset 2px 2px 2px 0 rgba(6, 201, 81, 0.1), rgba(0, 0, 0, 0.1) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.1) 0px 12px 20px;
+}
+#song-controls {
+  width: 60%;
+  margin: 0% 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  color: #df0a7f;
+}
+#song-controls .button {
+  height: 65px;
+  width: 65px;
+}
+#credit {
+  margin: 5% 0 0 0;
+  font-size: .8em;
+  line-height: 2rem;
+}
+
+/* ===================== thank you...  please follow my GitHub============== */
